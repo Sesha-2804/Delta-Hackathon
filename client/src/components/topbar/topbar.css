@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.topbarContainer{
+    height: 60px;
+    width: 100%;
+    background-color:  rgb(25,38,45);
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 0;
+    z-index: 999;
+    justify-content: space-between;
+    border-bottom:3px solid rgb(25,38,45);
+}
+.logo{
+    font-family: 'Carter One', cursive;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 28px;
+    color: #FEFFFF;
+    cursor: pointer;
+}
+
+
+.searchInput{
+    background-color:#DEF2F1;
+    border: none;
+    width: 80%;
+    height: 90%;
+    font-weight: 600;
+    font-size: 16px;
+    
+    
+}
+
+
+.topbarLeft{
+    flex: 3;
+}
+.topbarCenter{
+    flex: 2;
+}
+.topbarRight{
+    font-family: 'Secular One', sans-serif;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #DEF2F1;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.userBox i{
+    border-radius: 50%;
+    
+}
+.userProfile{
+    font-family: 'Secular One', sans-serif;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    color: #DEF2F1;
+    background-color:transparent;
+    margin-left: 10px;
+
+}
+.userProfile:hover{
+    background-color: #886ac0;
+}
+.logout{
+    font-family: 'Secular One', sans-serif;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    color: #DEF2F1;
+    background-color:transparent;
+}
+
+.logout:hover{
+    background-color: #886ac0;
+}
+.welcomeMsg{
+    font-family: 'Carter One', cursive;
+    
+    margin-left: 20px;
+    font-size: 22px;
+    color: #FEFFFF;
+    
+}

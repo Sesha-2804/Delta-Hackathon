@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loginPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #c9b7ea;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.loginWrapper{
+    background-color:rgb(95,3,136);
+    width: 45%;
+    height: 60%;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.71); 
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.71);
+    border-radius: 30px;
+}
+.loginBox{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.loginInput{
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border:1px solid rgba(163, 106, 106, 0.571);
+    font-size: 18px;
+    padding-left: 20px;
+    color: white;
+    opacity: 0.9;
+    background-color:rgba(0, 0, 0, 0.411);
+}
+.loginInput:focus{
+    outline: none;
+}
+.loginHead{
+    font-family: 'Carter One', cursive;
+    font-weight: bold;
+    font-size: 45px;
+    color: #DCD6F7;
+}
+.loginButton{
+    font-family: 'Secular One', sans-serif;
+    width: 30%;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+.loginSignUpbutton{
+    font-family: 'Secular One', sans-serif;
+    cursor: pointer;
+    width: 50%;
+    align-self: center;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #000000cf;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+}

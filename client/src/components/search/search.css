@@ -1,0 +1,52 @@
+.mainContainer{
+    flex:10;
+    height:calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+.mainWrapper{
+    width: 80%;
+    height: 20%;
+    background-color: rgb(25,38,45);
+    border-radius: 25px;
+    
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    /* border: 1px solid #feffff; */
+    
+}
+
+
+.readmem:hover{
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.writemem:hover{
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.ormainBox{
+    font-size: 20px;
+    font-family: 'Carter One', cursive;
+    color: rgb(255, 255, 255);
+}
+.searchbar{
+    width:500px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    padding-left: 15px;
+    font-size: 18px;
+}
+.searchButton{
+    width:80px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(129, 167, 224);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

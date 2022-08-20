@@ -1,0 +1,15 @@
+.homeContainer{
+    width:100%;
+    height: 100%;
+    background-color:#cfc0eb;
+    object-fit: cover;
+    display: flex;
+    /* background-color: aqua; */
+}
+.maindiv{
+    flex:6;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+
+}
