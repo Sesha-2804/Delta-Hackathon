@@ -22,17 +22,6 @@
 }
 
 
-.readmem:hover{
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-}
-.writemem:hover{
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-}
-.ormainBox{
-    font-size: 20px;
-    font-family: 'Carter One', cursive;
-    color: rgb(255, 255, 255);
-}
 .searchbar{
     width:500px;
     height: 40px;

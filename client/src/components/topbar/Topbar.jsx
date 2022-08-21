@@ -21,8 +21,8 @@ export default function Topbar() {
             <div className="topbarRight">
                 <div className="userBox">
                     
-                    <span className="userProfile">
-                    <Link className="link" to='/editprofile'>Add TimeTable</Link>
+                    <span className="userTimetable">
+                    Add TimeTable
                     </span>
                 </div>
                 <button className="logout">Edit my profile</button>

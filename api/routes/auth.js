@@ -34,7 +34,8 @@ router.post("/login",async (req,res)=>{
         !user && res.status(404).json("User not found")
         const password_matching=await bcrypt.compare(req.body.password,user.password)
         !password_matching && res.status(404).json("Password not matchiing");
-        const token = await jwt.sign({email:user.email,username:user.username,backgroundcolor:user.backgroundcolor},process.env.JWT_SECRET)
+        const token = await jwt.sign({email:user.email,username:user.username,backgroundcolor:user.backgroundcolor,timetable:user.timetable,
+            todos:user.todos},process.env.JWT_SECRET)
         res.json({data:{token,
             user:{
                 id:user._id,
@@ -100,30 +101,45 @@ router.get("/home",authenticateToken,async (req,res)=>{
         res.status(500).json(err);
     }
 })
+router.get("/currentuser",authenticateToken,async (req,res)=>{
+    try{
+        const curretUser= await Users.findOne({email:req.user.email})
+        res.status(200).json(curretUser)
+    }
+    catch(err){
+        res.status(500).json(err)
+    }
+})
 router.put("/updateTT",authenticateToken,async (req,res)=>{
     try{
-        const currentUser= await Users.findById(req.user._id);
-        await currentUser.timetable.push({sub:req.body.sub,prof:req.body.prof,timings:req.body.timings})
-        console.log("updated successfully")
+        const updatedUser=await Users.findOneAndUpdate({email:req.user.email},{$push:{timetable:req.body}},{new:true})
         
+        res.json(updatedUser)
         
     }catch(err){
         res.status(500).json(err);
     }
 })
-router.get("/todo",authenticateToken, async (req,res)=>{
+router.put("/updateTodo",authenticateToken,async (req,res)=>{
     try{
-        const currentUser= await Users.findById(req.user._id);
-        const tododeets= await Promise.all(
-            currentUser.todos.map((indiv)=>{
-                return  Users.findById(followingId)
-            })
-        )
-        res.status(200).json(followingdeets)
+        const updatedUser=await Users.findOneAndUpdate({email:req.user.email},{$push:{todos:req.body}},{new:true})
         
+        res.json(updatedUser)
         
     }catch(err){
         res.status(500).json(err);
     }
 })
+router.put("/deleteTodo",authenticateToken,async (req,res)=>{
+    try{
+        const updatedUser=await Users.findOneAndUpdate({email:req.user.email},{$pull:{todos:req.body}},{new:true})
+        
+        res.json(updatedUser)
+        
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
+
 export default router;

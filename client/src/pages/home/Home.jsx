@@ -15,6 +15,7 @@ import axios from "axios";
 export default function Home(){
     const [user, setUser] = useState({})
     const [backgroundcolor, setBackgroundcolor] = useState('');
+    const [timetablechange,setTimetablechange]=useState({})
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -32,12 +33,12 @@ export default function Home(){
             }
         }
         fetchUser()
-    },[backgroundcolor])
+    },[backgroundcolor,timetablechange])
     return(
         <>
             <Topbar/>
             <div className="homeContainer" style={{"background-color":backgroundcolor}}>
-                <Leftbar deets={user}/>
+                <Leftbar deets={user.timetable} onchange={(arg)=>setTimetablechange(arg)}/>
                 <div className="maindiv">
                     <Search/>
                     <Terminal onchange={(arg)=>setBackgroundcolor(arg)}/>
